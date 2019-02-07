@@ -1,0 +1,148 @@
+*{
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ W3 JIS2004" , "Hiragino Kaku Gothic W3 JIS2004", "Yu Gothic UI", "游ゴシック体", "Yu Gothic", YuGothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, Osaka, sans-serif;
+}
+h1{
+    text-align: center;
+    img{
+        max-width: 100%;
+        max-height: 10vh;
+        background-color: rgba(255, 255, 255, 0.35);
+        border-radius: 50px;
+    }
+}
+.bold{
+    font-weight: 600;
+}
+#back_yamu{
+    z-index: -3;
+    top:0;
+    left:0;
+    overflow: hidden;
+    position: fixed;
+    transform: translate(-25%,-25%) rotate(45deg);
+}
+#back_yamu_text{
+    position: absolute;
+    //top: -100%;
+    color:#fff;
+    background-color: #f8a5cc;
+    animation: textmove 60s linear infinite;
+}
+.proverb{
+    font-weight: 600;
+    //color: #000;
+}
+@keyframes textmove {
+    0% {
+        top:-100%;
+    }
+    100% {
+        top:0%
+    }
+}
+table{
+    margin: auto;
+    text-align: left;
+    border-collapse:collapse;
+    border-radius: 5px;
+}
+table,th,td{
+    border: solid 1px #e662c5;
+    padding: 5px;
+}
+.cup{
+    text-align: center;
+    a{
+        font-weight: 600;
+        font-size: 56px;
+        color:#ff00ea;
+        margin:auto;
+        text-decoration: none;
+    }
+}
+#content{
+    background-color: rgba(255,255,255,0.5);
+    max-width: 420px;
+    text-align: center;
+    margin: auto;
+    padding:20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(73, 44, 67, 0.2);
+}
+#share{
+    margin:25px 0;
+    text-align: center;
+    a{
+        display: inline-block;
+        border: 3px solid #fff0;
+        //display: block;
+        font-size:24px;
+        text-decoration: none;
+        color:white;
+        padding:12px;
+        margin:15px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 6px rgba(44, 73, 69, 0.2);
+        transition: all .1s ease;
+    }
+    
+    .twitter{
+        background-color:#0092e7;
+    }
+    .author{
+        background-color: #035d00
+    }
+    .vue{
+        background-color: #ff25db
+    }
+    .twitter:hover,.author:hover,.vue:hover{
+        transform: rotate(-5deg);
+        border: 3px solid rgb(255, 204, 36);
+        //font-weight: 600;
+    }
+}
+@media screen and (max-width:480px) { 
+#share{
+    a{
+        display: block;
+    }
+}
+}
+#info{
+    position: fixed;
+    bottom:0;
+    margin: 0;
+    p{
+        text-align: center;
+    }
+}
+@media screen and (max-height:1000px) { 
+    #info{
+        position: relative;
+    }
+}
+#b95{
+    z-index: -1;
+    position: fixed;
+    font-size:64px;
+    font-weight: 600;
+    color:white;
+    // 上
+    text-shadow: 2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000;
+    // 下
+    text-shadow: 2px 2px 1px #000,
+    -2px 2px 1px #000,
+    2px -2px 1px #000,
+    -2px -2px 1px #000;
+    top:0;
+    left:0;
+    transition: all 3s linear;
+}
+.passion{
+    background-color:rgba(255, 145, 0,0.7);
+    color:#fff;
+    font-weight: 600;
+}

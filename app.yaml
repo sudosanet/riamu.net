@@ -1,0 +1,18 @@
+ runtime: php55
+ api_version: 1
+ threadsafe: true
+
+ handlers:
+ - url: /
+   static_files: www/index.html
+   upload: www/index.html
+   secure: always
+   http_headers:
+     Strict-Transport-Security: 'max-age=63072000; includeSubDomains; preload; always;'
+
+ - url: /(.*)
+   static_files: www/\1
+   upload: www/(.*)
+   secure: always
+   http_headers:
+     Strict-Transport-Security: 'max-age=63072000; includeSubDomains; preload; always;'
